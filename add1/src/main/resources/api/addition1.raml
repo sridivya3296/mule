@@ -1,0 +1,26 @@
+#%RAML 1.0
+title: addition1
+protocols:
+  - HTTPS
+/add1:
+  get:
+    queryParameters:
+      number1:
+       type : number
+       required : true
+      number2:
+        type : number
+        required : true  
+    responses:
+     200:
+       body:
+        application/json:
+          example:
+            {"message" : "addition"}
+
+
+
+
+
+              
+                

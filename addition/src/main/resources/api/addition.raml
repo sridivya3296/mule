@@ -1,0 +1,19 @@
+#%RAML 1.0
+title: addition
+version: v6
+protocols:
+  - HTTPS
+traits:
+  error : !include exchange_modules/3f774c57-e857-4519-92cc-a0e2d5480594/error-status/1.2.1/error-status.raml
+      
+/addition:
+  put:
+    is:
+      - error
+    queryParameters:
+          number1:
+            type: number
+            required: true
+          number2:
+            type: number
+            required : true
