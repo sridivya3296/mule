@@ -13,6 +13,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<flow-ref doc:name="Flow Reference" doc:id="900f93e4-74f9-44f1-9df1-da9da8179ec9" name="helloSub_Flow"/>
 	</flow>
 	<sub-flow name="helloSub_Flow" doc:id="bb9607cf-ae52-4985-93e3-8d0623379dec" >
-		<logger level="INFO" doc:name="Logger" doc:id="f1232ec8-5f0d-45af-a590-4095a065400a" message="haii"/>
+		<logger level="INFO" doc:name="Logger" doc:id="f1232ec8-5f0d-45af-a590-4095a065400a" message="haii divya"/>
 	</sub-flow>
 </mule>
