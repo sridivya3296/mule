@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="f968682c-46fc-4583-9614-a2f3eb27764d" >
+		<http:listener-connection host="localhost" port="8028" />
+	</http:listener-config>
+	<flow name="helloFlow" doc:id="c411cfcc-eb84-452e-8d55-962584e9223d" >
+		<http:listener doc:name="Listener" doc:id="12b9f1b8-c43e-46eb-91ae-f5d5f0d37bd9" config-ref="HTTP_Listener_config" path="/helloworld"/>
+		<logger level="INFO" doc:name="Logger" doc:id="86f88b52-08fa-406f-a678-e914cdeae2b4" message="task done by divya"/>
+		<flow-ref doc:name="Flow Reference" doc:id="900f93e4-74f9-44f1-9df1-da9da8179ec9" name="helloSub_Flow"/>
+	</flow>
+	<sub-flow name="helloSub_Flow" doc:id="bb9607cf-ae52-4985-93e3-8d0623379dec" >
+		<logger level="INFO" doc:name="Logger" doc:id="f1232ec8-5f0d-45af-a590-4095a065400a" message="haii divya"/>
+		<logger level="INFO" doc:name="Logger" doc:id="204db897-a1aa-4e5b-bebd-283b5cc9eee9" message="pull the code"/>
+	
+</sub-flow>
+</mule>
